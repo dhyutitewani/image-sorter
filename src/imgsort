@@ -8,7 +8,6 @@ import exifread
 
 logging.basicConfig(level=logging.INFO, format = '%(asctime)s - %(levelname)s - %(message)s')
 
-
 def moveFile(file_path, device_folder):
     try:
         if not os.path.exists(device_folder):
