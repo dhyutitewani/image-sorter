@@ -2,3 +2,33 @@ Image Sorting
 
 Script to organize images into folders according to the device they were captured with.
 Adds all the videos to a folder called videos.
+
+
+Set up:
+
+1. Clone repo
+```
+git clone https://github.com/dhyutitewani/img-sorting.git
+```
+
+2. cd into folder
+```
+cd img-sorting
+```
+
+3. Create virtual env and activate
+```
+virtualenv venv
+source venv/bin/activate
+```
+
+4. Install requirements
+```
+pip install -r requirements.txt
+```
+
+5. Run script
+```
+cd src
+python3 imgsort
+```
