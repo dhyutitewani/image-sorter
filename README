@@ -6,29 +6,20 @@ Adds all the videos to a folder called videos.
 
 Set up:
 
-1. Clone repo
-```
-git clone https://github.com/dhyutitewani/img-sorting.git
-```
+# Clone repo
+$ git clone https://github.com/dhyutitewani/img-sorting.git
 
-2. cd into folder
-```
-cd img-sorting
-```
+# cd into folder
+$ cd img-sorting
 
-3. Create virtual env and activate
-```
-virtualenv venv
-source venv/bin/activate
-```
+# Create virtual env and activate
+$ virtualenv venv
+$ source venv/bin/activate
 
-4. Install requirements
-```
-pip install -r requirements.txt
-```
+# install requirements
+$ pip install -r requirements.txt
 
-5. Run script
-```
-cd src
-python3 imgsort
-```
+# run script
+$ cd src
+$ python3 imgsort
+
