@@ -4,7 +4,7 @@ Script to organize images into folders according to the device they were capture
 Adds all the videos to a folder called videos.
 
 
-Set up:
+set up:
 
 # clone repo
 $ git clone https://github.com/dhyutitewani/img-sorting.git
