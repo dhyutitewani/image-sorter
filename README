@@ -6,13 +6,13 @@ Adds all the videos to a folder called videos.
 
 Set up:
 
-# Clone repo
+# clone repo
 $ git clone https://github.com/dhyutitewani/img-sorting.git
 
 # cd into folder
 $ cd img-sorting
 
-# Create virtual env and activate
+# create virtual env and activate
 $ virtualenv venv
 $ source venv/bin/activate
 
