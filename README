@@ -22,3 +22,4 @@ $ pip install -r requirements.txt
 # run script
 $ python3 imgsort
 
+NOTE: uses exifread version 2.3.2 for HEIC type image file support
