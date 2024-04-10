@@ -6,9 +6,9 @@ import shutil
 import logging
 import exifread
 
-logging.basicConfig(level=logging.INFO, format = '%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level = logging.INFO, format = '%(asctime)s - %(levelname)s - %(message)s')
 
-def moveFile(file_path, device_folder):
+def move_file(file_path, device_folder):
     try:
         if not os.path.exists(device_folder):
             os.makedirs(device_folder)
@@ -18,7 +18,7 @@ def moveFile(file_path, device_folder):
     except Exception as e:
         logging.error(f'file {file_path} to {device_folder}: {e}\n')
 
-def deviceInfo(fext, file_path, folder_path):
+def device_info(fext, file_path, folder_path):
     try:
         if fext.lower() in ('.jpeg', '.jpg', '.png', '.gif', '.heic'):
             with open(file_path, 'rb') as f:
@@ -42,18 +42,18 @@ def deviceInfo(fext, file_path, folder_path):
         logging.error(f'processing file {file_path}: {e}\n')
         return None
 
-def processingFile(folder_path):
+def processing_file(folder_path):
     for file in os.listdir(folder_path):
         _, fext = os.path.splitext(file)
         file_path = os.path.join(folder_path, file)
 
         if os.path.isfile(file_path):
                 logging.info(f'processing file {file_path}')
-                device_folder = deviceInfo(fext, file_path, folder_path)
+                device_folder = device_info(fext, file_path, folder_path)
                 if device_folder is not None:
-                    moveFile(file_path, device_folder)
+                    move_file(file_path, device_folder)
 
-def configFolder(folder_path = None):
+def config_folder(folder_path = None):
 	if folder_path is None:
 		folder_path = os.path.join(os.path.expanduser("~"), 'Downloads')
 	try:
@@ -64,9 +64,9 @@ def configFolder(folder_path = None):
 		if not folder_path:
 			logging.error('failed to expand environment variable')
 
-		processingFile(folder_path)
+		processing_file(folder_path)
 
 	except Exception as e:
 		logging.error('error getting folder path')
 
-configFolder()
+config_folder()
